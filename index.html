@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum App</title>
+    
+    <style>
+        body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        }
+
+        /* 텍스트를 흰색으로 설정하고 그림자 추가 */
+        h2, h1, #quote span, #weather span, #todo-list li {
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 그림자를 추가해 가독성 높임 */
+        }
+
+        /* 전체적으로 글자 크기를 키움 */
+        h2#clock {
+        font-size: 64px; /* 시계 크기 키움 */
+        }
+
+        h1#greeting {
+        font-size: 48px; /* 환영 메시지 크기 */
+        margin-bottom: 20px;
+        }
+
+        #todo-list li {
+        font-size: 24px; /* 투두 리스트 글자 크기 */
+        margin-top: 15px;
+        list-style: none;
+        }
+
+        form input[type="text"], form input[type="submit"] {
+        font-size: 24px; /* 입력 필드와 버튼 크기 */
+        padding: 10px;
+        }
+
+        button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 24px; /* 삭제 버튼 크기 */
+        }
+    </style>
+    </head>
+    <body>
+    <h2 id="clock">00:00:00</h2>
+    
+    <form id="login-form" class="hidden">
+        <input type="text" placeholder="Enter your name" required />
+        <input type="submit" value="Log In" />
+    </form>
+    
+    <h1 id="greeting" class="hidden"></h1>
+    
+    <form id="todo-form" class="hidden">
+        <input type="text" placeholder="Write a To Do and Press Enter" required />
+    </form>
+    
+    <ul id="todo-list"></ul>
+    
+    <div id="quote">
+        <span>Quote goes here</span>
+    </div>
+    
+    <div id="weather">
+        <span>Weather: </span>
+        <span>Location</span>
+    </div>
+    
+    <script src="js/clock.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+</html>
